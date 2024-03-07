@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-          quick: "Quicksand, sans-serif"
+          heading: "Montserrat, sans-serif",
+          paragraph: "Lato, sans-serif"
       }
     },
   },
