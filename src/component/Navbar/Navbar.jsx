@@ -50,11 +50,11 @@ const Navbar = () => {
     }
     return (
         <div className={scrolled ? 'bg-[#121212]' : 'bg-transparent'}>
-            <div className="navbar font-heading fixed w-full z-50 transition duration-300 ease-in-out">
+            <div className="navbar font-heading fixed w-full z-50 py-7 transition duration-300 ease-in-out">
                 <div className="navbar-start md:pl-3 xl:pl-20 2xl:pl-40">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <Hamburger></Hamburger>
+                            <Hamburger color='#FFFFFF' size={18} md:size={20}></Hamburger>
                         </div>
                         <Menu styles={style}>
 
@@ -76,6 +76,18 @@ const Navbar = () => {
 
                                     onClick={() => onUpdateActiveLink('projects')}
                                 >Project</Link></li>
+                            <br />
+                            <h3 className='text-xl font-heading font-bold text-white no-underline py-5'>Let's Connect</h3>
+                            <hr className='text-slate-600 text-xl' />
+                            <div className='py-5'>
+                                <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.facebook.com/sham.shihan41/">FaceBook</a>
+                                <br />
+                                <a className='text-xl font-heading font-bold text-white no-underline' href="">Instagram</a>
+                                <br />
+                                <a className='text-xl font-heading font-bold text-white no-underline' href="">GitHub</a>
+                                <br />
+                                <a className='text-xl font-heading font-bold text-white no-underline' href="">LinkedIn</a>
+                            </div>
                         </Menu>
 
                     </div>
