@@ -49,8 +49,8 @@ const Navbar = () => {
         }
     }
     return (
-        <div className={scrolled ? 'bg-[#121212]' : 'bg-transparent'}>
-            <div className="navbar font-heading fixed w-full z-50 py-7 transition duration-300 ease-in-out">
+        <div className={scrolled ? '' : 'bg-transparent'}>
+            <div className="navbar font-heading w-full z-50 py-7 transition duration-300 ease-in-out">
                 <div className="navbar-start md:pl-3 xl:pl-20 2xl:pl-40">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -130,7 +130,7 @@ const Navbar = () => {
                             <FaLinkedin className='text-base xl:text-xl text-white'></FaLinkedin>
                         </button>
                     </div>
-                    <button className="btn text-white font-heading font-semibold text-base xl:text-lg bg-[#222222] hover:bg-[#222222] xl:btn-lg ">Let's Connect</button>
+                    <button className="btn text-white font-heading font-semibold text-base xl:text-lg bg-[#222222] hover:bg-[#222222] xl:btn-lg ">Let's Talk</button>
                 </div>
             </div >
         </div>
