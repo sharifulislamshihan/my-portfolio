@@ -39,7 +39,7 @@ const Banner = () => {
             </div>
 
             <div className=" z-0">
-                <Marquee className="opacity-50 overflow-hidden">
+                <Marquee className="opacity-10 text-white overflow-hidden">
                     <h3 className=" text-6xl xl:text-9xl font-paragraph"> Frontend Developer specializing in React and the MERN stack... </h3>
                 </Marquee>
             </div>
