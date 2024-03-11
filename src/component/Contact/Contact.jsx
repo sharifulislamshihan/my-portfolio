@@ -1,5 +1,6 @@
 
 import { useForm } from "react-hook-form"
+import Swal from "sweetalert2";
 
 
 
@@ -8,7 +9,26 @@ const Contact = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
+        // Sending data for email
         console.log(data);
+        fetch('http://localhost:5000/contact', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                Swal.fire({
+                    title: "So Sweet of you. I will get back to you at my earliest convenience",
+                    text: "Modal with a custom image.",
+                    imageUrl: "https://unsplash.it/400/200",
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: "Custom image"
+                });
+            })
     };
 
 
@@ -29,6 +49,7 @@ const Contact = () => {
                                 <label className="input input-bordered flex items-center gap-2 w-full">
                                     Name
                                     <input
+                                        className="w-full"
                                         type="text"
                                         placeholder="Your Name"
                                         {...register("Name", { required: true })} />
@@ -38,7 +59,7 @@ const Contact = () => {
                                     Email
                                     <input
                                         type="text"
-
+                                        className="w-full"
                                         placeholder="example@mail.com"
                                         {...register("Email", { required: true })} />
                                 </label>
@@ -48,32 +69,34 @@ const Contact = () => {
                                 <label className="input input-bordered flex items-center gap-2 w-full">
                                     Phone Number
                                     <input
-                                        type="number"
-                                        placeholder="Phone"
-                                        {...register("Phone")} />
+                                        className="w-full"
+                                        type="tel"
+                                        placeholder="Phone Number"
+                                        {...register("Phone", { required: true })} />
                                 </label>
 
 
                                 <label className="input input-bordered flex items-center gap-2 w-full">
                                     Country
                                     <input
+                                        className="w-full"
                                         type="text"
                                         placeholder="Country"
                                         {...register("Country", { required: true })} />
                                 </label>
                             </div>
 
-                            <textarea 
-                            placeholder="Message" 
-                            className="textarea textarea-bordered textarea-lg w-full"
-                            {...register("Message", { required: true })} 
-                            rows={6}></textarea>
+                            <textarea
+                                placeholder="Message"
+                                className="textarea textarea-bordered textarea-lg w-full"
+                                {...register("Message", { required: true })}
+                                rows={6}></textarea>
                         </div>
 
-                        <input 
-                        className="btn btn-block text-white font-heading font-semibold text-base xl:text-lg bg-[#222222] hover:bg-[#222222] my-6" 
-                        type="submit"
-                        value="Send Me Message"
+                        <input
+                            className="btn btn-block text-white font-heading font-semibold text-base xl:text-lg bg-[#222222] hover:bg-[#222222] my-6"
+                            type="submit"
+                            value="Send Me Message"
                         />
                     </form>
                 </div>
