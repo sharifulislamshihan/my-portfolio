@@ -1,9 +1,12 @@
+import { Element } from "react-scroll";
 
 const Projects = () => {
     return (
-        <div>
-             <h3 className="text-white text-5xl font-paragraph font-bold text-center">VISIT MY PROJECTS</h3>
-        </div>
+        <Element name="projects">
+            <div>
+                <h3 className="text-white text-xl lg:text-5xl font-paragraph font-bold text-center mx-3 ">VISIT MY PROJECTS</h3>
+            </div>
+        </Element>
     );
 };
 
