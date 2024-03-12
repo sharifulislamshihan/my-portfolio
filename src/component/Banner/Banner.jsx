@@ -1,6 +1,7 @@
 import { FaDownload } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import Marquee from "react-fast-marquee";
+import resume from "../../assets/Resume.pdf"
 
 const Banner = () => {
 
@@ -28,7 +29,9 @@ const Banner = () => {
                         />
                     </div>
                     <div className="py-10">
-                        <button className="btn btn-outline text-white text-center">Download Resume <FaDownload></FaDownload> </button>
+                        <a href={resume} download='Shariful Islam Shihan Resume'>
+                            <button className="btn btn-outline text-white text-center">Download Resume <FaDownload></FaDownload> </button>
+                        </a>
                     </div>
 
                 </div>
