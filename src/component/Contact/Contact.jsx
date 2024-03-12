@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 
 const Contact = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
         // Sending data for email
@@ -19,16 +19,14 @@ const Contact = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => {
-                Swal.fire({
-                    title: "So Sweet of you. I will get back to you at my earliest convenience",
-                    text: "Modal with a custom image.",
-                    imageUrl: "https://unsplash.it/400/200",
-                    imageWidth: 400,
-                    imageHeight: 200,
-                    imageAlt: "Custom image"
-                });
-            })
+        Swal.fire({
+            title: "So Sweet of you. I will get back to you at my earliest convenience",
+            text: "Peace",
+            imageUrl: "https://i.ibb.co/TtLHmgD/happy-cat-jamart-photography.jpg",
+            imageWidth: 400,
+            imageHeight: 300,
+            imageAlt: "Happy image"
+        });
     };
 
 
