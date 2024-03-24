@@ -28,6 +28,7 @@ const Navbar = () => {
     const onUpdateActiveLink = (value) => {
         setActiveLink(value)
     }
+
     // to set the menu bar in mobile device
     var style = {
         bmCross: {
@@ -49,6 +50,7 @@ const Navbar = () => {
             background: ''
         }
     }
+
     return (
         <div className={scrolled ? '' : 'bg-transparent'}>
             <div className="navbar font-heading w-full z-50 py-7 transition duration-300 ease-in-out">
