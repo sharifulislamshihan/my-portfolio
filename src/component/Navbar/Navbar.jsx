@@ -55,65 +55,67 @@ const Navbar = () => {
         <div className={scrolled ? '' : 'bg-transparent'}>
             <div className="navbar font-heading w-full z-50 py-7 transition duration-300 ease-in-out">
                 <div className="navbar-start md:pl-3 xl:pl-20 2xl:pl-40">
-                    <div className="dropdown">
+                    <div className="">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <Hamburger color='#FFFFFF' size={18} md:size={20}></Hamburger>
                         </div>
-                        <Menu styles={style}>
+                        <div className='lg:hidden'>
+                            <Menu styles={style}>
 
-                            <li>
-                                <Link to='home'
-                                    className={activeLink === 'home' ? 'text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
-                                    onClick={() => onUpdateActiveLink('home')}
-                                >Home</Link>
-                            </li>
-                            <li>
-                                <Link to='aboutMe'
-                                    className={activeLink === 'aboutMe' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
-                                    onClick={() => onUpdateActiveLink('aboutMe')}
-                                >About Me</Link>
-                            </li>
-                            <li>
-                                <Link to='services'
-                                    className={activeLink === 'services' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
+                                <li>
+                                    <Link to='home'
+                                        className={activeLink === 'home' ? 'text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
+                                        onClick={() => onUpdateActiveLink('home')}
+                                    >Home</Link>
+                                </li>
+                                <li>
+                                    <Link to='aboutMe'
+                                        className={activeLink === 'aboutMe' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
+                                        onClick={() => onUpdateActiveLink('aboutMe')}
+                                    >About Me</Link>
+                                </li>
+                                <li>
+                                    <Link to='services'
+                                        className={activeLink === 'services' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
 
-                                    onClick={() => onUpdateActiveLink('services')}
-                                >Services</Link></li>
-                            <li>
-                                <Link to='projects'
-                                    className={activeLink === 'projects' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
+                                        onClick={() => onUpdateActiveLink('services')}
+                                    >Services</Link></li>
+                                <li>
+                                    <Link to='projects'
+                                        className={activeLink === 'projects' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
 
-                                    onClick={() => onUpdateActiveLink('projects')}
-                                >Projects</Link></li>
-                            <li>
-                                <Link to='skills'
-                                    className={activeLink === 'skills' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
+                                        onClick={() => onUpdateActiveLink('projects')}
+                                    >Projects</Link></li>
+                                <li>
+                                    <Link to='skills'
+                                        className={activeLink === 'skills' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
 
-                                    onClick={() => onUpdateActiveLink('skills')}
-                                >Skills</Link>
-                            </li>
-                            <li>
-                                <Link to='contact'
-                                    className={activeLink === 'contact' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
+                                        onClick={() => onUpdateActiveLink('skills')}
+                                    >Skills</Link>
+                                </li>
+                                <li>
+                                    <Link to='contact'
+                                        className={activeLink === 'contact' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
 
-                                    onClick={() => onUpdateActiveLink('contact')}
-                                >Contact</Link>
-                            </li>
-                            <br />
-                            <a href="https://www.linkedin.com/in/shariful-islam-shihan/">
-                                <h3 className='text-xl font-heading font-bold text-white no-underline py-5'>Let's Connect</h3>
-                            </a>
-                            <hr className='text-slate-600 text-xl' />
-                            <div className='py-5'>
-                                <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.facebook.com/sham.shihan41/">FaceBook</a>
+                                        onClick={() => onUpdateActiveLink('contact')}
+                                    >Contact</Link>
+                                </li>
                                 <br />
-                                <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.instagram.com/mr_shihan/">Instagram</a>
-                                <br />
-                                <a className='text-xl font-heading font-bold text-white no-underline' href="https://github.com/sharifulislamshihan">GitHub</a>
-                                <br />
-                                <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.linkedin.com/in/shariful-islam-shihan/">LinkedIn</a>
-                            </div>
-                        </Menu>
+                                <a href="https://www.linkedin.com/in/shariful-islam-shihan/">
+                                    <h3 className='text-xl font-heading font-bold text-white no-underline py-5'>Let's Connect</h3>
+                                </a>
+                                <hr className='text-slate-600 text-xl' />
+                                <div className='py-5'>
+                                    <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.facebook.com/sham.shihan41/">FaceBook</a>
+                                    <br />
+                                    <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.instagram.com/mr_shihan/">Instagram</a>
+                                    <br />
+                                    <a className='text-xl font-heading font-bold text-white no-underline' href="https://github.com/sharifulislamshihan">GitHub</a>
+                                    <br />
+                                    <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.linkedin.com/in/shariful-islam-shihan/">LinkedIn</a>
+                                </div>
+                            </Menu>
+                        </div>
 
                     </div>
 
