@@ -7,19 +7,19 @@ import Swal from "sweetalert2";
 
 
 const Contact = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = (data) => {
         // Sending data for email
         console.log(data);
-        fetch('http://localhost:5000/contact', {
+        fetch('https://my-portfolio-server-eta-eight.vercel.app/contact', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(data)
         })
-            .then(res => res.json())
+            .then(res => res.json(), reset())
         Swal.fire({
             title: "So Sweet of you. I will get back to you at my earliest convenience",
             text: "Peace",
@@ -28,6 +28,7 @@ const Contact = () => {
             imageHeight: 300,
             imageAlt: "Happy image"
         });
+
     };
 
 
@@ -77,7 +78,7 @@ const Contact = () => {
 
 
                                     <label className="input input-bordered flex items-center gap-2 w-full">
-                                        Country
+                                        Address
                                         <input
                                             className="w-full"
                                             type="text"
