@@ -1,0 +1,60 @@
+.view-button {
+    --c: goldenrod;
+    @apply inline-block relative overflow-hidden z-10 transition duration-500 hover:text-black;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    margin: 1em;
+}
+
+.view-button:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.view-button button {
+    @apply w-full h-full;
+}
+
+.view-button span {
+    @apply absolute w-1/4 h-full;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.view-button span:nth-child(1) {
+    --n: 1;
+    left: calc((var(--n) - 1) * 25%);
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+}
+
+.view-button span:nth-child(2) {
+    --n: 2;
+    left: calc((var(--n) - 1) * 25%);
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+}
+
+.view-button span:nth-child(3) {
+    --n: 3;
+    left: calc((var(--n) - 1) * 25%);
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+}
+
+.view-button span:nth-child(4) {
+    --n: 4;
+    left: calc((var(--n) - 1) * 25%);
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+}

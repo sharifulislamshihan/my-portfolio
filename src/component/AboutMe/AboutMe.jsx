@@ -9,13 +9,10 @@ const AboutMe = () => {
                 </h3>
 
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:mx-10 xl:mx-40">
-                    <div>
-                        <img src="" alt="" />
-                    </div>
-                    <div className="mx-10 text-center lg:text-left">
+                <div className=" text-center md:mx-10 xl:mx-40">
+                    <div className="mx-10 xl:mx-60 text-center">
                         <h3 className=" text-[#ebe8e1] text-3xl font-semibold font-heading mb-10">Me, Myself, and I: The Coding Edition</h3>
-                        <div className="flex justify-center lg:justify-start">
+                        <div className="flex justify-center">
                             <hr className="w-1/4 h-10" />
                         </div>
                         <p className="text-slate-500 text-lg hover:text-slate-300 py-5">Greetings! I'm <span className="font-semibold">Shariful Islam Shihan</span> a dedicated MERN Stack Developer with a keen eye for FRONTEND development. Specializing in REACT, I thrive on translating concepts into seamless user interfaces. My journey is fueled by a passion for innovation and a commitment to creating engaging digital experiences. Beyond coding, I delve into the ever-evolving world of frontend trends, always seeking new inspiration.</p>

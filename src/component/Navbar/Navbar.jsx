@@ -69,13 +69,13 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link to='aboutMe'
-                                    className={activeLink === 'home' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
+                                    className={activeLink === 'aboutMe' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
                                     onClick={() => onUpdateActiveLink('aboutMe')}
                                 >About Me</Link>
                             </li>
                             <li>
                                 <Link to='services'
-                                    className={activeLink === 'projects' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
+                                    className={activeLink === 'services' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
 
                                     onClick={() => onUpdateActiveLink('services')}
                                 >Services</Link></li>
@@ -94,22 +94,24 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link to='contact'
-                                    className={activeLink === 'skills' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
+                                    className={activeLink === 'contact' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
 
                                     onClick={() => onUpdateActiveLink('contact')}
                                 >Contact</Link>
                             </li>
                             <br />
-                            <h3 className='text-xl font-heading font-bold text-white no-underline py-5'>Let's Connect</h3>
+                            <a href="https://www.linkedin.com/in/shariful-islam-shihan/">
+                                <h3 className='text-xl font-heading font-bold text-white no-underline py-5'>Let's Connect</h3>
+                            </a>
                             <hr className='text-slate-600 text-xl' />
                             <div className='py-5'>
                                 <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.facebook.com/sham.shihan41/">FaceBook</a>
                                 <br />
-                                <a className='text-xl font-heading font-bold text-white no-underline' href="">Instagram</a>
+                                <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.instagram.com/mr_shihan/">Instagram</a>
                                 <br />
-                                <a className='text-xl font-heading font-bold text-white no-underline' href="">GitHub</a>
+                                <a className='text-xl font-heading font-bold text-white no-underline' href="https://github.com/sharifulislamshihan">GitHub</a>
                                 <br />
-                                <a className='text-xl font-heading font-bold text-white no-underline' href="">LinkedIn</a>
+                                <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.linkedin.com/in/shariful-islam-shihan/">LinkedIn</a>
                             </div>
                         </Menu>
 
@@ -167,25 +169,30 @@ const Navbar = () => {
 
                 <div className="navbar-end gap-5 z-50 xl:gap-10 pr-5 xl:pr-20 2xl:pr-40">
                     <div className='space-x-2 hidden md:block transition duration-300 ease-in-out'>
-                        <a href="https://www.facebook.com/sham.shihan41/">
+                        <a href="https://www.facebook.com/sham.shihan41/" target='_blink'>
                             <button className='btn btn-circle btn-outline btn-md lg:btn-sm xl:btn-md bg-[#222222]'>
                                 <FaFacebook className='text-base xl:text-xl text-white'></FaFacebook>
                             </button>
                         </a>
-                        <a href="https://github.com/sharifulislamshihan">
+                        <a href="https://github.com/sharifulislamshihan" target='_blink'>
                             <button className='btn btn-circle btn-outline btn-md lg:btn-sm xl:btn-md bg-[#222222]'>
                                 <FaGithub className='text-base xl:text-xl text-white'></FaGithub>
                             </button>
                         </a>
-                        <a href="www.linkedin.com/in/shariful-islam-shihan">
+                        <a href="https://www.linkedin.com/in/shariful-islam-shihan/" target='_blink'>
                             <button className='btn btn-circle btn-outline btn-md lg:btn-sm xl:btn-md bg-[#222222]'>
                                 <FaLinkedin className='text-base xl:text-xl text-white'></FaLinkedin>
                             </button>
                         </a>
                     </div>
-                    <a href="">
-                        <button className="btn text-white font-heading font-semibold text-base xl:text-lg bg-[#222222] hover:bg-[#222222] xl:btn-lg ">Let's Talk</button>
-                    </a>
+
+                    <div>
+                        <a href="https://www.linkedin.com/in/shariful-islam-shihan/" target='_blink'>
+                            <button className="btn text-white font-heading font-semibold text-base xl:text-lg bg-[#222222] hover:bg-[#222222] xl:btn-lg ">
+                                Let's Talk
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div >
         </div>

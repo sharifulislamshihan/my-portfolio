@@ -11,7 +11,7 @@ import Skills from "../Skills/Skills";
 const Home = () => {
     return (
 
-        <div>
+        <div className="overflow-hidden">
             <Navbar></Navbar>
 
             <Banner></Banner>
