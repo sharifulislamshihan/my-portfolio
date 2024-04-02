@@ -1,7 +1,7 @@
 import { FaDownload } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import Marquee from "react-fast-marquee";
-import resume from "../../assets/Resume.pdf"
+import resume from "../../../public/resume.pdf"
 
 const Banner = () => {
 
@@ -28,9 +28,13 @@ const Banner = () => {
                             repeat={Infinity}
                         />
                     </div>
-                    <div className="py-10">
-                        <a href={resume} download='Shariful Islam Shihan Resume'>
-                            <button className="btn btn-outline text-white text-center">Download Resume <FaDownload></FaDownload> </button>
+                    <div className="flex gap-2 md:gap-5 py-10">
+                        <a href="https://drive.google.com/file/d/1newkDYD-vsxCRafH0i4YmxZnEPemYDaA/view?usp=sharing">
+                            <button className="btn btn-outline text-white text-center">View Resume </button>
+                        </a>
+
+                        <a href={resume} download="Shariful Islam Shihan Resume">
+                            <button className="btn btn-md btn-outline text-white text-center">Download Resume <FaDownload></FaDownload> </button>
                         </a>
                     </div>
 

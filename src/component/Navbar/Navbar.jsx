@@ -1,6 +1,4 @@
-import { Sling as Hamburger } from 'hamburger-react'
 import { useEffect, useState } from 'react';
-import { slide as Menu } from 'react-burger-menu'
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 const Navbar = () => {
@@ -30,7 +28,7 @@ const Navbar = () => {
     }
 
     // to set the menu bar in mobile device
-    var style = {
+    const style = {
         bmCross: {
             background: '#000000'
         },
@@ -51,56 +49,46 @@ const Navbar = () => {
         }
     }
 
+
     return (
         <div className={scrolled ? '' : 'bg-transparent'}>
             <div className="navbar font-heading w-full z-50 py-7 transition duration-300 ease-in-out">
                 <div className="navbar-start md:pl-3 xl:pl-20 2xl:pl-40">
-                    <div className="">
+                    <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <Hamburger color='#FFFFFF' size={18} md:size={20}></Hamburger>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
-                        <div className='lg:hidden'>
-                            <Menu styles={style}>
-
-                                <li>
-                                    <Link to='home'
-                                        className={activeLink === 'home' ? 'text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
-                                        onClick={() => onUpdateActiveLink('home')}
-                                    >Home</Link>
-                                </li>
-                                <li>
-                                    <Link to='aboutMe'
-                                        className={activeLink === 'aboutMe' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
-                                        onClick={() => onUpdateActiveLink('aboutMe')}
-                                    >About Me</Link>
-                                </li>
-                                <li>
-                                    <Link to='services'
-                                        className={activeLink === 'services' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
-
-                                        onClick={() => onUpdateActiveLink('services')}
-                                    >Services</Link></li>
-                                <li>
-                                    <Link to='projects'
-                                        className={activeLink === 'projects' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
-
-                                        onClick={() => onUpdateActiveLink('projects')}
-                                    >Projects</Link></li>
-                                <li>
-                                    <Link to='skills'
-                                        className={activeLink === 'skills' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
-
-                                        onClick={() => onUpdateActiveLink('skills')}
-                                    >Skills</Link>
-                                </li>
-                                <li>
-                                    <Link to='contact'
-                                        className={activeLink === 'contact' ? 'text-lg xl:text-xl font-heading font-bold text-white' : 'text-lg xl:text-xl font-heading font-bold text-white opacity-50 no-underline hover:opacity-0'}
-
-                                        onClick={() => onUpdateActiveLink('contact')}
-                                    >Contact</Link>
-                                </li>
-                                <br />
+                        <ul tabIndex={0} className="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-[#373a47] rounded-box w-72">
+                            <li>
+                                <Link to='home'
+                                    className='text-xl font-heading font-bold text-white'
+                                >Home</Link>
+                            </li>
+                            <li>
+                                <Link to='aboutMe'
+                                    className='text-xl font-heading font-bold text-white'
+                                >About Me</Link>
+                            </li>
+                            <li>
+                                <Link to='services'
+                                    className='text-xl font-heading font-bold text-white'
+                                >Services</Link></li>
+                            <li>
+                                <Link to='projects'
+                                    className='text-xl font-heading font-bold text-white'
+                                >Projects</Link></li>
+                            <li>
+                                <Link to='skills'
+                                    className='text-xl font-heading font-bold text-white'
+                                >Skills</Link>
+                            </li>
+                            <li>
+                                <Link to='contact'
+                                    className='text-xl font-heading font-bold text-white'
+                                >Contact</Link>
+                            </li>
+                            <br />
+                            <div className='mx-5'>
                                 <a href="https://www.linkedin.com/in/shariful-islam-shihan/">
                                     <h3 className='text-xl font-heading font-bold text-white no-underline py-5'>Let's Connect</h3>
                                 </a>
@@ -114,11 +102,9 @@ const Navbar = () => {
                                     <br />
                                     <a className='text-xl font-heading font-bold text-white no-underline' href="https://www.linkedin.com/in/shariful-islam-shihan/">LinkedIn</a>
                                 </div>
-                            </Menu>
-                        </div>
-
+                            </div>
+                        </ul>
                     </div>
-
 
                     <a className="z-50 text-white text-2xl font-bold">Shihan web</a>
                 </div>
