@@ -29,7 +29,7 @@ const Banner = () => {
                         />
                     </div>
                     <div className="flex gap-2 md:gap-5 py-10">
-                        <a href="https://drive.google.com/file/d/1newkDYD-vsxCRafH0i4YmxZnEPemYDaA/view?usp=sharing">
+                        <a href="https://drive.google.com/file/d/1khC84BVhR7cT8-JJjQgJX-p0oZ2RjOGG/view?usp=sharing">
                             <button className="btn btn-outline text-white text-center">View Resume </button>
                         </a>
 
